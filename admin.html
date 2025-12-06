@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Yönetici Paneli | Travisa Admin</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        .admin-sidebar {
+            min-height: 100vh;
+            background-color: #212529;
+            color: white;
+        }
+
+        .admin-sidebar a {
+            color: #adb5bd;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        .admin-sidebar a:hover,
+        .admin-sidebar a.active {
+            background-color: #FA482D;
+            /* Theme Primary Color */
+            color: white;
+        }
+
+        .card-stat {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .card-stat:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-lg-2 admin-sidebar p-3">
+                <div class="text-center mb-4">
+                    <h3 class="text-white">TRAVISA <span class="text-primary">Admin</span></h3>
+                </div>
+                <hr class="bg-secondary">
+                <nav class="nav flex-column">
+                    <a href="admin.html" class="active"><i class="fas fa-tachometer-alt me-2"></i> Dashboard</a>
+                    <a href="admin-add-announcement.html"><i class="fas fa-bullhorn me-2"></i> Duyuru Ekle</a>
+                    <a href="admin-basvuru.html"><i class="fas fa-list me-2"></i> Başvurular <span
+                            class="badge bg-danger ms-2">3</span></a>
+                    <a href="admin-musteriler.html"><i class="fas fa-users me-2"></i> Müşteriler</a>
+                    <a href="admin-settings.html"><i class="fas fa-cog me-2"></i> Ayarlar</a>
+                    <a href="index.html" class="mt-5 bg-secondary text-white"><i class="fas fa-sign-out-alt me-2"></i>
+                        Siteye Dön</a>
+                </nav>
+            </div>
+
+            <div class="col-md-9 col-lg-10 bg-light p-4">
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2>Genel Bakış</h2>
+                    <div class="d-flex align-items-center">
+                        <span class="me-3">Merhaba, <strong>Admin</strong></span>
+                        <img src="img/testimonial-1.jpg" class="rounded-circle" width="40" height="40" alt="Admin">
+                    </div>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card card-stat bg-white p-4">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="text-muted mb-2">Toplam Başvuru</h6>
+                                    <h3 class="mb-0">1,245</h3>
+                                </div>
+                                <div class="icon-box bg-light rounded-circle p-3 text-primary">
+                                    <i class="fas fa-file-alt fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card card-stat bg-white p-4">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="text-muted mb-2">Okunmamış Mesaj</h6>
+                                    <h3 class="mb-0">12</h3>
+                                </div>
+                                <div class="icon-box bg-light rounded-circle p-3 text-success">
+                                    <i class="fas fa-envelope fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card card-stat bg-white p-4">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="text-muted mb-2">Aktif Duyurular</h6>
+                                    <h3 class="mb-0">5</h3>
+                                </div>
+                                <div class="icon-box bg-light rounded-circle p-3 text-warning">
+                                    <i class="fas fa-bullhorn fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card card-stat bg-white p-4">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="text-muted mb-2">Aylık Ziyaretçi</h6>
+                                    <h3 class="mb-0">8,500</h3>
+                                </div>
+                                <div class="icon-box bg-light rounded-circle p-3 text-info">
+                                    <i class="fas fa-chart-line fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <div class="card border-0 shadow-sm p-4 h-100">
+                            <h5 class="mb-4">Haftalık Ziyaretçi Analizi</h5>
+                            <canvas id="adminChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="card border-0 shadow-sm p-4 h-100">
+                            <h5 class="mb-4">Son Gelen Başvurular</h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>İsim</th>
+                                            <th>Vize Türü</th>
+                                            <th>Durum</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Ali Yılmaz</td>
+                                            <td>Öğrenci</td>
+                                            <td><span class="badge bg-warning">Bekliyor</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ayşe Demir</td>
+                                            <td>Turistik</td>
+                                            <td><span class="badge bg-success">Onaylandı</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mehmet Can</td>
+                                            <td>Çalışma</td>
+                                            <td><span class="badge bg-info">İnceleniyor</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Zeynep Kaya</td>
+                                            <td>Oturum</td>
+                                            <td><span class="badge bg-warning">Bekliyor</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <a href="admin-basvuru.html" class="btn btn-outline-primary w-100 mt-3">Tümünü Gör</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const ctx = document.getElementById('adminChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt', 'Paz'],
+                datasets: [{
+                    label: 'Ziyaretçiler',
+                    data: [150, 230, 180, 320, 290, 450, 500],
+                    borderColor: '#FA482D',
+                    backgroundColor: 'rgba(250, 72, 45, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

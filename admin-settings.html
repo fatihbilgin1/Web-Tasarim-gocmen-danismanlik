@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ayarlar | Travisa Admin</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .admin-sidebar {
+            min-height: 100vh;
+            background-color: #212529;
+            color: white;
+        }
+
+        .admin-sidebar a {
+            color: #adb5bd;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        .admin-sidebar a:hover,
+        .admin-sidebar a.active {
+            background-color: #FA482D;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-lg-2 admin-sidebar p-3">
+                <div class="text-center mb-4">
+                    <h3 class="text-white">TRAVISA <span class="text-primary">Admin</span></h3>
+                </div>
+                <hr class="bg-secondary">
+                <nav class="nav flex-column">
+                    <a href="admin.html"><i class="fas fa-tachometer-alt me-2"></i> Dashboard</a>
+                    <a href="admin-add-announcement.html"><i class="fas fa-bullhorn me-2"></i> Duyuru Ekle</a>
+                    <a href="admin-basvuru.html"><i class="fas fa-list me-2"></i> Başvurular</a>
+                    <a href="admin-musteriler.html"><i class="fas fa-users me-2"></i> Müşteriler</a>
+                    <a href="admin-settings.html" class="active"><i class="fas fa-cog me-2"></i> Ayarlar</a>
+                    <a href="index.html" class="mt-5 bg-secondary text-white"><i class="fas fa-sign-out-alt me-2"></i>
+                        Siteye Dön</a>
+                </nav>
+            </div>
+
+            <div class="col-md-9 col-lg-10 bg-light p-4">
+                <h2 class="mb-4">Site Ayarları</h2>
+
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <ul class="nav nav-tabs mb-4" id="settingsTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active text-dark" id="general-tab" data-bs-toggle="tab"
+                                    data-bs-target="#general" type="button" role="tab">Genel Ayarlar</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link text-dark" id="contact-tab" data-bs-toggle="tab"
+                                    data-bs-target="#contact" type="button" role="tab">İletişim Bilgileri</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link text-dark" id="security-tab" data-bs-toggle="tab"
+                                    data-bs-target="#security" type="button" role="tab">Güvenlik</button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="settingsTabContent">
+
+                            <div class="tab-pane fade show active" id="general" role="tabpanel">
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label">Site Başlığı</label>
+                                        <input type="text" class="form-control"
+                                            value="Travisa - Vize ve Göçmenlik Danışmanlığı">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Site Açıklaması (Meta Description)</label>
+                                        <textarea class="form-control"
+                                            rows="3">Profesyonel vize danışmanlığı, göçmenlik hizmetleri ve yurtdışı eğitim...</textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Logo Yükle</label>
+                                        <input type="file" class="form-control">
+                                    </div>
+                                    <button class="btn btn-primary">Kaydet</button>
+                                </form>
+                            </div>
+
+                            <div class="tab-pane fade" id="contact" role="tabpanel">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Telefon Numarası</label>
+                                            <input type="text" class="form-control" value="+90 530 768 09 75">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">E-posta Adresi</label>
+                                            <input type="email" class="form-control" value="info@travisa.com">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Adres</label>
+                                        <textarea class="form-control"
+                                            rows="2">Örnek Mah. Vize Cad. No:123 Şişli/İstanbul</textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Google Maps Embed Kodu</label>
+                                        <input type="text" class="form-control" placeholder="<iframe>...</iframe>">
+                                    </div>
+                                    <button class="btn btn-primary">Güncelle</button>
+                                </form>
+                            </div>
+
+                            <div class="tab-pane fade" id="security" role="tabpanel">
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label">Mevcut Şifre</label>
+                                        <input type="password" class="form-control">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Yeni Şifre</label>
+                                        <input type="password" class="form-control">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Yeni Şifre (Tekrar)</label>
+                                        <input type="password" class="form-control">
+                                    </div>
+                                    <button class="btn btn-danger">Şifreyi Değiştir</button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

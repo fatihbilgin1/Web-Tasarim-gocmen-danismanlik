@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Duyuru Ekle | Travisa Admin</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .admin-sidebar {
+            min-height: 100vh;
+            background-color: #212529;
+            color: white;
+        }
+
+        .admin-sidebar a {
+            color: #adb5bd;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        .admin-sidebar a:hover,
+        .admin-sidebar a.active {
+            background-color: #FA482D;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-lg-2 admin-sidebar p-3">
+                <div class="text-center mb-4">
+                    <h3 class="text-white">TRAVISA <span class="text-primary">Admin</span></h3>
+                </div>
+                <hr class="bg-secondary">
+                <nav class="nav flex-column">
+                    <a href="admin.html"><i class="fas fa-tachometer-alt me-2"></i> Dashboard</a>
+                    <a href="admin-add-announcement.html" class="active"><i class="fas fa-bullhorn me-2"></i> Duyuru
+                        Ekle</a>
+                    <a href="admin-basvuru.html"><i class="fas fa-list me-2"></i> Başvurular</a>
+                    <a href="admin-basvuru.html"><i class="fas fa-users me-2"></i> Müşteriler</a>
+                    <a href="admin-musteriler.html"><i class="fas fa-cog me-2"></i> Ayarlar</a>
+                    <a href="index.html" class="mt-5 bg-secondary text-white"><i class="fas fa-sign-out-alt me-2"></i>
+                        Siteye Dön</a>
+                </nav>
+            </div>
+
+            <div class="col-md-9 col-lg-10 bg-light p-4">
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2>Yeni Duyuru Ekle</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="admin.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Duyuru Ekle</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="card border-0 shadow-sm p-5">
+                            <h4 class="mb-4 text-primary">Duyuru / Haber Detayları</h4>
+
+                            <form>
+                                <div class="mb-4">
+                                    <label for="duyuruBaslik" class="form-label fw-bold">Duyuru Başlığı</label>
+                                    <input type="text" class="form-control" id="duyuruBaslik"
+                                        placeholder="Örn: 2025 Vize Harçları Hakkında">
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="duyuruIcerik" class="form-label fw-bold">Duyuru İçeriği</label>
+                                    <textarea class="form-control" id="duyuruIcerik" rows="6"
+                                        placeholder="Duyuru metnini buraya giriniz..."></textarea>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <label for="kategori" class="form-label fw-bold">Kategori</label>
+                                        <select class="form-select" id="kategori">
+                                            <option selected>Genel Duyuru</option>
+                                            <option value="1">Vize Güncellemesi</option>
+                                            <option value="2">Kampanya</option>
+                                            <option value="3">Haberler</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <label for="yayinTarihi" class="form-label fw-bold">Yayın Tarihi</label>
+                                        <input type="date" class="form-control" id="yayinTarihi">
+                                    </div>
+                                </div>
+
+                                <div class="mb-4 p-4 border border-dashed bg-light rounded text-center">
+                                    <label for="dosyaYukle" class="form-label fw-bold d-block mb-3">
+                                        <i class="fas fa-cloud-upload-alt fa-3x text-primary mb-2"></i><br>
+                                        Dosya veya Resim Yükle
+                                    </label>
+                                    <input class="form-control w-50 mx-auto" type="file" id="dosyaYukle"
+                                        accept=".jpg, .png, .pdf, .doc, .docx">
+                                    <div class="form-text mt-2">Desteklenen formatlar: PDF, Word (.doc, .docx), JPG, PNG
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-end gap-2">
+                                    <button type="button" class="btn btn-secondary px-4">İptal</button>
+                                    <button type="submit" class="btn btn-primary px-5">Yayınla</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

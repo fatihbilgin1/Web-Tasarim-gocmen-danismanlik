@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Başvurular | Travisa Admin</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .admin-sidebar {
+            min-height: 100vh;
+            background-color: #212529;
+            color: white;
+        }
+
+        .admin-sidebar a {
+            color: #adb5bd;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        .admin-sidebar a:hover,
+        .admin-sidebar a.active {
+            background-color: #FA482D;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-lg-2 admin-sidebar p-3">
+                <div class="text-center mb-4">
+                    <h3 class="text-white">TRAVISA <span class="text-primary">Admin</span></h3>
+                </div>
+                <hr class="bg-secondary">
+                <nav class="nav flex-column">
+                    <a href="admin.html"><i class="fas fa-tachometer-alt me-2"></i> Dashboard</a>
+                    <a href="admin-add-announcement.html"><i class="fas fa-bullhorn me-2"></i> Duyuru Ekle</a>
+                    <a href="admin-basvuru.html" class="active"><i class="fas fa-list me-2"></i> Başvurular</a>
+                    <a href="admin-musteriler.html"><i class="fas fa-users me-2"></i> Müşteriler</a>
+                    <a href="admin-settings.html"><i class="fas fa-cog me-2"></i> Ayarlar</a>
+                    <a href="index.html" class="mt-5 bg-secondary text-white"><i class="fas fa-sign-out-alt me-2"></i>
+                        Siteye Dön</a>
+                </nav>
+            </div>
+
+            <div class="col-md-9 col-lg-10 bg-light p-4">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2>Gelen Başvurular</h2>
+                    <div class="input-group w-25">
+                        <input type="text" class="form-control" placeholder="Başvuru Ara...">
+                        <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>#ID</th>
+                                        <th>Ad Soyad</th>
+                                        <th>Vize Türü</th>
+                                        <th>Hedef Ülke</th>
+                                        <th>Tarih</th>
+                                        <th>Durum</th>
+                                        <th>İşlemler</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#1024</td>
+                                        <td>Ahmet Yılmaz</td>
+                                        <td>Öğrenci Vizesi</td>
+                                        <td>Kanada</td>
+                                        <td>30.11.2025</td>
+                                        <td><span class="badge bg-warning">İnceleniyor</span></td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary"><i
+                                                    class="fas fa-eye"></i></button>
+                                            <button class="btn btn-sm btn-outline-danger"><i
+                                                    class="fas fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#1023</td>
+                                        <td>Ayşe Demir</td>
+                                        <td>Turistik Vize</td>
+                                        <td>İtalya</td>
+                                        <td>29.11.2025</td>
+                                        <td><span class="badge bg-success">Onaylandı</span></td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary"><i
+                                                    class="fas fa-eye"></i></button>
+                                            <button class="btn btn-sm btn-outline-danger"><i
+                                                    class="fas fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#1022</td>
+                                        <td>Mehmet Can</td>
+                                        <td>Çalışma Vizesi</td>
+                                        <td>Almanya</td>
+                                        <td>28.11.2025</td>
+                                        <td><span class="badge bg-danger">Reddedildi</span></td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary"><i
+                                                    class="fas fa-eye"></i></button>
+                                            <button class="btn btn-sm btn-outline-danger"><i
+                                                    class="fas fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#1021</td>
+                                        <td>Zeynep Kaya</td>
+                                        <td>Golden Visa</td>
+                                        <td>Yunanistan</td>
+                                        <td>25.11.2025</td>
+                                        <td><span class="badge bg-info">Evrak Bekliyor</span></td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary"><i
+                                                    class="fas fa-eye"></i></button>
+                                            <button class="btn btn-sm btn-outline-danger"><i
+                                                    class="fas fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <nav aria-label="Page navigation" class="mt-4">
+                            <ul class="pagination justify-content-end">
+                                <li class="page-item disabled"><a class="page-link" href="#">Önceki</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">Sonraki</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
